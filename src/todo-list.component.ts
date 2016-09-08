@@ -12,6 +12,7 @@ import {ToDoService} from "./todo-service";
 <ul>
 <li *ngFor="let todo of todoService.todos">
 {{todo.title}} - {{todo.status}}
+<button (click)="todo.toggle()">Change Status</button>
 </li>
 </ul>
 </div>`
