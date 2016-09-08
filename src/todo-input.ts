@@ -9,12 +9,12 @@ import {Component} from "@angular/core";
     selector: 'todo-input',
     template: `<div>
 <input type="text" #myInput>
-<button (click)="onClick(myInput.value)">Click me</button>
+<button (mouseover)="onClick($event, myInput.value)">Click me</button>
 </div>`
 })
 export class ToDoInput {
-    onClick(value) {
-        console.log(value);
+    onClick(event, value) {
+        console.log(event, value);
     }
 
 }
