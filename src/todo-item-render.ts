@@ -5,8 +5,14 @@
 import {Component, Input} from "@angular/core";
 @Component({
     selector: 'todo-item-render',
+    // styles: ['.completed { display: none}'],
     template: `
-{{todo.title}} - {{todo.status}}
+<style>
+.completed{
+text-decoration: line-through;
+}
+</style>
+<span [ngClass]="todo.status">{{todo.title}} </span>
 <button (click)="todo.toggle()">Change Status</button>
 `
 })
