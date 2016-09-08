@@ -4,17 +4,25 @@
 
 
 import {Component} from "@angular/core";
+import {ToDoService} from "./todo-service";
 
 @Component({
     selector: 'todo-input',
     template: `<div>
 <input type="text" #myInput>
-<button (mouseover)="onClick($event, myInput.value)">Click me</button>
+<button (click)="onClick(myInput.value)">{{label}}</button>
 </div>`
 })
 export class ToDoInput {
-    onClick(event, value) {
-        console.log(event, value);
+    onClick(value) {
+        this.todoService.todos.push(value);
+        console.log(this.todoService.todos);
+    }
+
+    private label: String;
+
+    constructor(public todoService: ToDoService) {
+        this.label = todoService.buttonName;
     }
 
 }
