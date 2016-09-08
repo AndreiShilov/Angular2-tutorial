@@ -5,13 +5,17 @@
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserModule} from "@angular/platform-browser";
 import {Component, NgModule} from "@angular/core";
-import {ToDoInput} from "./todo-input";
+import {ToDoInput} from "./todo-input.component";
 import {ToDoService} from "./todo-service";
+import {TodoList} from "./todo-list.component";
 
 
 @Component({
     selector: 'app',
-    template: `<div><todo-input></todo-input></div>`,
+    template: `<div>
+<todo-input></todo-input>
+<todo-list></todo-list>
+</div>`,
 })
 export class AppComponent {
 }
@@ -25,7 +29,8 @@ export class AppComponent {
     // provide('whatever', {useClass: ToDoService})
     declarations: [
         AppComponent,
-        ToDoInput
+        ToDoInput,
+        TodoList
     ],
     bootstrap: [AppComponent]
 })
