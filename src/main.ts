@@ -5,11 +5,12 @@
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserModule} from "@angular/platform-browser";
 import {Component, NgModule} from "@angular/core";
+import {ToDoInput} from "./todo-input";
 
 
 @Component({
     selector: 'app',
-    template: '<div>Hello from app</div>',
+    template: `<div><todo-input></todo-input></div>`,
 })
 export class AppComponent {
 }
@@ -20,7 +21,8 @@ export class AppComponent {
         BrowserModule
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        ToDoInput
     ],
     bootstrap: [AppComponent]
 })
