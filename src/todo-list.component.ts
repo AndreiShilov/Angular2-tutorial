@@ -10,8 +10,9 @@ import {ToDoService} from "./todo-service";
     template: `<div>
 
 <ul>
-<li *ngFor="let todo of todoService.todos | search">
-<todo-item-render [todo]="todo" ></todo-item-render>
+<li *ngFor="let todo of todoService.todos | started">
+<todo-item-render [todo]="todo"
+ (changeStatus)="todoService.toggleTodo($event)"></todo-item-render>
 </li>
 </ul>
 </div>`

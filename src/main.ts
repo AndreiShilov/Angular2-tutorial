@@ -11,6 +11,7 @@ import {TodoList} from "./todo-list.component";
 import {FormsModule} from "@angular/forms";
 import {TodoItem} from "./todo-item-render";
 import {SearchPipe} from "./search-pipe";
+import {StartedPipe} from "./started-pipe";
 
 
 @Component({
@@ -36,7 +37,8 @@ export class AppComponent {
         ToDoInput,
         TodoList,
         TodoItem,
-        SearchPipe
+        SearchPipe,
+        StartedPipe
     ],
     bootstrap: [AppComponent]
 })
