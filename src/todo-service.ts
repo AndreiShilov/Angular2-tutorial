@@ -9,7 +9,15 @@ export class ToDoService {
         new TodoModel("Title1"),
         new TodoModel("Title2"),
         new TodoModel("Title3"),
-        new TodoModel("Title4"),
+        new TodoModel("Title4", "completed"),
+        new TodoModel("Title5"),
+        new TodoModel("Title6"),
+        new TodoModel("Title7", "completed"),
+        new TodoModel("Title8"),
+        new TodoModel("Title9"),
+        new TodoModel("Title10", "completed"),
+        new TodoModel("Title11"),
+        new TodoModel("Title12"),
     ];
 
     addTodo(todo: TodoModel) {

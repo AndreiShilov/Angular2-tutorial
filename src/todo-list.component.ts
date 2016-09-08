@@ -10,7 +10,7 @@ import {ToDoService} from "./todo-service";
     template: `<div>
 
 <ul>
-<li *ngFor="let todo of todoService.todos | started : status">
+<li *ngFor="let todo of todoService.todos | started : status | search :term">
 <todo-item-render [todo]="todo"
  (changeStatus)="todoService.toggleTodo($event)"></todo-item-render>
 </li>
@@ -19,9 +19,8 @@ import {ToDoService} from "./todo-service";
 })
 export class TodoList {
     @Input() status;
+    @Input() term;
 
     constructor(@Inject(ToDoService) public todoService) {
-
     }
-
 }

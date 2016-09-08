@@ -4,9 +4,8 @@
 
 
 export class TodoModel {
-    status: String = 'started';
 
-    constructor(public title: String = "") {
+    constructor(public title: String = "", public status: String = "started") {
     }
 
     public toggle(): void {
