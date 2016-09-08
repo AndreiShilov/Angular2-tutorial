@@ -5,13 +5,13 @@
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserModule} from "@angular/platform-browser";
 import {Component, NgModule} from "@angular/core";
-import {ToDoInput} from "./todo-input.component";
-import {SearchBox} from "./search-box";
-import {ToDoService} from "./todo-service";
-import {TodoList} from "./todo-list.component";
+import {ToDoInput} from "./todo/todo-input.component";
+import {SearchBox} from "./search/components/search-box";
+import {ToDoService} from "./todo/todo-service";
+import {TodoList} from "./todo/todo-list.component";
 import {FormsModule} from "@angular/forms";
-import {TodoItem} from "./todo-item-render";
-import {SearchPipe} from "./search-pipe";
+import {TodoItem} from "./todo/todo-item-render";
+import {SearchPipe} from "./search/pipes/search-pipe";
 import {StartedPipe} from "./started-pipe";
 import {StatusSelector} from "./status-selector";
 
@@ -28,7 +28,6 @@ import {StatusSelector} from "./status-selector";
 })
 export class AppComponent {
 }
-
 
 @NgModule({
     imports: [
@@ -51,6 +50,5 @@ export class AppComponent {
 })
 export class AppModule {
 }
-
 
 platformBrowserDynamic().bootstrapModule(AppModule);
