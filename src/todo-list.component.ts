@@ -10,7 +10,7 @@ import {ToDoService} from "./todo-service";
     template: `<div>
 
 <ul>
-<li *ngFor="let todo of todoService.todos">
+<li *ngFor="let todo of todoService.todos | search">
 <todo-item-render [todo]="todo" ></todo-item-render>
 </li>
 </ul>

@@ -12,7 +12,8 @@ import {Component, Input} from "@angular/core";
 text-decoration: line-through;
 }
 </style>
-<span [ngClass]="todo.status">{{todo.title}} </span>
+<span [ngClass]="todo.status">{{todo.title | uppercase}} </span>
+<!--<span [ngClass]="todo.status">{{todo.title | uppercase}} </span>-->
 <button (click)="todo.toggle()">Change Status</button>
 `
 })
