@@ -5,21 +5,24 @@
 
 import {Component, Inject} from "@angular/core";
 import {ToDoService} from "./todo-service";
+import {TodoModel} from "./TodoModel";
 
 @Component({
     selector: 'todo-input',
     template: `<div>
 <form (submit)="onSubmit()" name="todo">
-<input type="text" [(ngModel)]="task" name="task"/>
+<input type="text" [(ngModel)]="todoModel.title" name="task"/>
 </form>
 </div>`
 })
 export class ToDoInput {
-    public task;
+    public todoModel:TodoModel = new TodoModel();
     onSubmit() {
-        this.todoService.todos.push(this.task);
+        this.todoService.todos.push(this.todoModel);
         console.log(this.todoService.todos);
+        this.todoModel = new TodoModel();
     }
+
 
     private label: String;
 

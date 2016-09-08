@@ -11,7 +11,7 @@ import {ToDoService} from "./todo-service";
 
 <ul>
 <li *ngFor="let todo of todoService.todos">
-{{todo}}
+{{todo.title}} - {{todo.status}}
 </li>
 </ul>
 </div>`
