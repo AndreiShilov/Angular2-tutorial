@@ -3,7 +3,7 @@
  */
 
 
-import {Component} from "@angular/core";
+import {Component, Inject} from "@angular/core";
 import {ToDoService} from "./todo-service";
 
 @Component({
@@ -21,7 +21,7 @@ export class ToDoInput {
 
     private label: String;
 
-    constructor(public todoService: ToDoService) {
+    constructor(@Inject(ToDoService) public todoService) {
         this.label = todoService.buttonName;
     }
 

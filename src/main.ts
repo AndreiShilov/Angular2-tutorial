@@ -22,6 +22,7 @@ export class AppComponent {
         BrowserModule
     ],
     providers: [ToDoService],
+    // provide('whatever', {useClass: ToDoService})
     declarations: [
         AppComponent,
         ToDoInput
