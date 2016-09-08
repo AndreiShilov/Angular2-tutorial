@@ -9,13 +9,15 @@ import {ToDoService} from "./todo-service";
 @Component({
     selector: 'todo-input',
     template: `<div>
-<input type="text" #myInput>
-<button (click)="onClick(myInput.value)">{{label}}</button>
+<form (submit)="onSubmit()" name="todo">
+<input type="text" [(ngModel)]="task" name="task"/>
+</form>
 </div>`
 })
 export class ToDoInput {
-    onClick(value) {
-        this.todoService.todos.push(value);
+    public task;
+    onSubmit() {
+        this.todoService.todos.push(this.task);
         console.log(this.todoService.todos);
     }
 

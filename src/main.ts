@@ -8,6 +8,7 @@ import {Component, NgModule} from "@angular/core";
 import {ToDoInput} from "./todo-input.component";
 import {ToDoService} from "./todo-service";
 import {TodoList} from "./todo-list.component";
+import {FormsModule} from "@angular/forms";
 
 
 @Component({
@@ -23,7 +24,8 @@ export class AppComponent {
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     providers: [ToDoService],
     // provide('whatever', {useClass: ToDoService})
