@@ -9,6 +9,7 @@ import {ToDoInput} from "./todo-input.component";
 import {ToDoService} from "./todo-service";
 import {TodoList} from "./todo-list.component";
 import {FormsModule} from "@angular/forms";
+import {TodoItem} from "./todo-item-render";
 
 
 @Component({
@@ -32,7 +33,8 @@ export class AppComponent {
     declarations: [
         AppComponent,
         ToDoInput,
-        TodoList
+        TodoList,
+        TodoItem
     ],
     bootstrap: [AppComponent]
 })
