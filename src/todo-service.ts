@@ -11,4 +11,8 @@ export class ToDoService {
         new TodoModel("Title3"),
         new TodoModel("Title4"),
     ];
+
+    addTodo(todo: TodoModel) {
+        this.todos = [...this.todos, todo];
+    }
 }
