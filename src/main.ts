@@ -12,13 +12,15 @@ import {FormsModule} from "@angular/forms";
 import {TodoItem} from "./todo-item-render";
 import {SearchPipe} from "./search-pipe";
 import {StartedPipe} from "./started-pipe";
+import {StatusSelector} from "./status-selector";
 
 
 @Component({
     selector: 'app',
     template: `<div>
 <todo-input></todo-input>
-<todo-list></todo-list>
+<status-selector (select)="status = $event"></status-selector>
+<todo-list [status]="status"></todo-list>
 </div>`,
 })
 export class AppComponent {
@@ -38,7 +40,8 @@ export class AppComponent {
         TodoList,
         TodoItem,
         SearchPipe,
-        StartedPipe
+        StartedPipe,
+        StatusSelector
     ],
     bootstrap: [AppComponent]
 })

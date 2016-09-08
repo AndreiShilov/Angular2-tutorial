@@ -12,5 +12,5 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 })
 export class TodoItem {
     @Input() todo;
-    @Output() changeStatus: EventEmitter = new EventEmitter()
+    @Output() changeStatus = new EventEmitter()
 }
